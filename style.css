@@ -20,7 +20,7 @@ body{
     height: 36px;
     animation: heartbeat 4s infinite;
     margin: 0 auto;
-    margin-bottom: 160px;
+    margin-bottom: 161px;
 }
 
 #heart:before,
