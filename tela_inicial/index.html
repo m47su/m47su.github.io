@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Poemas</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-family: 'Indie Flower', cursive;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      background-color: #e66383;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .poem {
+      margin-top: 40px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pesquisa de Poemas</h1>
+    <input type="text" class="input" id="keyword" placeholder="Digite uma palavra-chave">
+    <button class="button" onclick="pesquisarPoema()">Pesquisar</button>
+    <div class="poem" id="poem"></div>
+  </div>
+
+  <script>
+    function pesquisarPoema() {
+      var poemElement = document.getElementById("poem");
+      var keyword = document.getElementById("keyword").value;
+
+      // Enviar solicitação para a API PoetryDB
+      var url = `https://poetrydb.org/lines/${keyword}`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          // Verificar se há poemas disponíveis
+          if (data && data.length > 0) {
+            // Selecionar um poema aleatório da resposta da API
+            var poema = data[Math.floor(Math.random() * data.length)];
+
+            // Exibir o poema gerado
+            poemElement.innerHTML = poema.lines.join("<br>");
+          } else {
+            poemElement.innerHTML = "Não foi possível encontrar um poema com a palavra-chave fornecida.";
+          }
+        })
+        .catch(error => {
+          poemElement.innerHTML = "Ocorreu um erro ao recuperar o poema. Por favor, tente novamente mais tarde.";
+        });
+    }
+  </script>
+</body>
+
+</html>
