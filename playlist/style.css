@@ -1,0 +1,346 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.heartstrings-title {
+font-family: 'Indie Flower', cursive;
+color: white;
+}
+/* Estilos para a barra lateral */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #faa6cd;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  text-shadow: 2px 2px 3px rgb(255 0 130 / 50%);
+}
+
+.sidebar a:hover {
+  color: #ff5faf;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+transition: margin-left .5s;
+padding: 1px;
+background-attachment: fixed;
+background-position-y: 20%;
+}
+
+
+
+
+.container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffadd3;
+}
+
+h1 {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 70px;
+  margin-top: -25px;
+  color: #fff5f8;
+  text-shadow: 3px 5px 0px rgb(239 120 175 / 50%);
+  letter-spacing: 2px;
+}
+
+
+.input-wrapper {
+position: relative;
+display: inline-block;
+}
+
+.input {
+letter-spacing: 2px;
+width: 290px;
+margin-top: 25px;
+border: none;
+border-bottom: 2px solid #e66383;
+font-size: 16px;
+font-family: 'Indie Flower', cursive;
+background-color: transparent;
+transition: border-color 0.3s;
+color:white;
+}
+
+.input:focus {
+outline: none;
+border-color: #ffb5d4;
+}
+
+.input-line {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: #e66383;
+transform-origin: bottom center;
+transform: scaleX(0);
+transition: transform 0.3s;
+}
+
+.input:focus + .input-line {
+transform: scaleX(1);
+}
+.input::placeholder {
+color: white;
+}
+
+
+.button {
+background-color: #e66383;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+
+.button {
+  background-color: #e66383;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adiciona uma borda de espaçamento entre os cartões */
+  margin-left: 5rem;
+}
+
+.playlist-item {
+    position: relative;
+    height: 245px;
+    width: 200px; /* Define um tamanho fixo para os cartões de vídeo */
+    background-color: #ffffff73;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffb5d4; /* Adiciona uma borda marrom */
+    box-shadow: 2px 4px 0px rgb(239 120 175 / 50%);
+  }
+  
+  .playlist-item .thumbnail {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cf5079ab;
+    box-shadow: 2px 5px 0px rgb(239 120 175 / 50%);
+  }
+  
+  .playlist-item .title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Indie Flower', cursive;
+    padding: 9px;
+    color: #d33c6d;
+    font-weight: bold;
+  }
+  
+  .playlist-item .barra-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    top: 165px;
+  }
+  
+  .playlist-item .remove-button-container {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .playlist-item .remove-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #eb2d57d9;
+    cursor: pointer;
+    padding: 3px;
+  }
+  
+  .playlist-item .remove-button:hover {
+    color: #fa91a8; /* Define a cor mais clara para o estado de hover */
+  }
+  
+.playlist-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+  }
+  
+  .playlist-item h3 {
+    margin-bottom: 5px;
+  }
+  
+  .playlist-item .barra-img {
+    display: block;
+    margin-top: 5px;
+  }
+
+.playlist-item h3 {
+  font-size: 14px;
+  font-family: 'Indie Flower', cursive;
+  padding: 9px;
+}
+
+.barra-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  
+  .remove-button-container {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #eb2d57d9;
+    cursor: pointer;
+  }
+  
+  .playlist-item img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+ 
+  
+  .remove-button:hover {
+    color: #fa91a8; /* Define a cor mais clara para o estado de hover */
+  }
+  
+
+.transparent-button {
+background-color: transparent;
+border: none;
+padding: 0;
+}
+
+.transparent-button:hover {
+background-color: transparent;
+}
+body {
+margin: 0;
+padding: 0;
+margin-bottom: 20px;
+background-color:#FAD1E3;
+overflow-y: scroll;
+}
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('playlist.jpg');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center bottom 20%;
+  background-color: #FAD1E3;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+.adicionar-musica {
+  width: 540px;
+  height: 65px;
+  background-color: #ff7cac73;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff68a7; /* Adiciona uma borda marrom */
+  text-shadow: 2px 2px 0px rgb(239 120 175 / 50%);
+  margin-left: 25rem;
+}
+
+.filtro {
+  background-color: #ffb9b973;
+  width: auto;
+}
+
+.adicionar-botao{
+border-radius: 10px;
+font-family: cursive;
+}

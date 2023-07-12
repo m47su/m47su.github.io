@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.heartstrings-title {
+  font-family: 'Indie Flower', cursive;
+  color: white;
+}
+
+/* Estilos para o conteúdo principal */
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 70px;
+  margin-top: -25px;
+  color: #fff5f8;
+  text-shadow: 3px 5px 0px rgb(239 120 175 / 50%);
+  letter-spacing: 2px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input {
+  letter-spacing: 2px;
+  width: 290px;
+  margin-top: 25px;
+  border: none;
+  border-bottom: 2px solid #e66383;
+  font-size: 16px;
+  font-family: 'Indie Flower', cursive;
+  background-color: transparent;
+  transition: border-color 0.3s;
+  color: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffb5d4;
+}
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e66383;
+  transform-origin: bottom center;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.input:focus+.input-line {
+  transform: scaleX(1);
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.button {
+  background-color: #e66383;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.transparent-button:hover {
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0px;
+  background-color: #FAD1E3;
+  overflow: hidden;
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('tela_inicial.jpg');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center bottom 0%;
+  background-color: #F8CAD4;
+  z-index: -1;
+}
+
+.adicionar-musica {
+  width: 540px;
+  height: 65px;
+  background-color: #ff7cac73;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff68a7;
+  /* Adiciona uma borda marrom */
+  text-shadow: 2px 2px 0px rgb(239 120 175 / 50%);
+  margin-left: 25rem;
+}
+
+.filtro {
+  background-color: rgba(255, 185, 185, 0.45);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.adicionar-botao {
+  border-radius: 10px;
+  font-family: cursive;
+}
+
+
+    .topbar {
+      background-color: #f59eb4;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .topbar-logo {
+      font-family: 'Cherry Bomb One', cursive;
+      font-size: 24px;
+      color: white;
+      margin-right: auto;
+    }
+
+    .topbar-link {
+      color: white;
+      font-size: 18px;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .topbar-link:hover {
+      text-decoration: underline;
+    }

@@ -2,34 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="raposa.png" type="image/png">
-    <title>Destrancar!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="raposa.png" type="image/png">
+  <title>Destrancar!</title>
 </head>
 
 <body>
-    <div class="container">
-        <!-- entrar -->
-        <div class="login-wrap active">
-            <div class="title">
-                <h1 class="heartstrings-title">Heart<span class="heart-color">Strings</span></h1>
-                <hr class="dotted-line">
-            </div>
-            <div class="button-area">
-                <button id="login-btn" type="submit" class="login-btn">Destrancar!</button>
-            </div>                       
-            <div class="form-toggle-area">
-                <p>Você tem acesso à chave do <span id="toggle-signup">meu coração!</span></p>
-            </div>
-            <div class="heart-animation">
-                <div id="heart"></div>
-            </div>
+  <div class="container">
+    <!-- entrar -->
+    <div class="login-wrap active">
+      <div class="title">
+        <h1 class="heartstrings-title">Heart<span class="heart-color">Strings</span></h1>
+        <hr class="dotted-line">
+      </div>
+      <form method="POST" action="tela_inicial/index.php">
+        <div class="button-area">
+          <button type="submit" name="destrancar" class="login-btn">Destrancar!</button>
         </div>
+      </form>
+      <div class="form-toggle-area">
+        <p>Você tem acesso à chave do <span id="toggle-signup">meu coração!</span></p>
+      </div>
+      <div class="heart-animation ">
+        <div id="heart"></div>
+      </div>
     </div>
-    <script src="coracao.js"></script>
-    <link rel="stylesheet" href="style.css">    
+  </div>
+  <script src="coracao.js"></script>
+  <link rel="stylesheet" href="style.css">
 </body>
+
 </html>
